@@ -1,0 +1,16 @@
+#include<stdio.h>
+
+int denominator(int a,int b)
+{
+if(a%b!=0)  denominator(b,a%b);
+else return b;
+}
+
+main()
+{
+int a,b;
+printf("Please input a,b--");
+scanf("%d,%d",&a,&b);
+printf("Common denominator of a,b is %d\n",denominator(a,b));
+getch();
+}
